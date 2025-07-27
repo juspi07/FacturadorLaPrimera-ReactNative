@@ -11,12 +11,12 @@ const fs = require('fs')
 
 const url = 'https://www.afip.gob.ar/fe/qr/'
 
-const Cuit = 20218452788 //30670206528 //20218452788
+const Cuit = //Ingresar cuit de la empresa
 
 const afip = new Afip({
 	production: false,
-	cert: fs.readFileSync('./testingCRT1.crt', "utf-8"),
-	key: fs.readFileSync('./testingKey.key', "utf-8"),
+	cert: fs.readFileSync('cambiar por certificado', "utf-8"),
+	key: fs.readFileSync('cambiar por key', "utf-8"),
 	//cert: fs.readFileSync('./productioncrt.crt', "utf-8"),
 	//key: fs.readFileSync('./productionKEY.key', "utf-8"),
 	cuit: Cuit,
@@ -35,9 +35,9 @@ app.use(cors({
 }));
 
 const connection = mysql.createPool({
-	host: 'localhost', //192.168.0.142
-	user: 'root', //ventas
-	password: '1234', //ventas
+	host: 'localhost',
+	user: 'root',
+	password: '1234',
 	multipleStatements: true
 });
 

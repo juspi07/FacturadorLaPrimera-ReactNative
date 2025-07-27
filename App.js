@@ -71,7 +71,6 @@ export default function App() {
   )*/
 
 
-
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{flex:1}}>
